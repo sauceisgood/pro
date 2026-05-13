@@ -1,13 +1,5 @@
 {
-  "functions": {
-    "api/proxy.py": {
-      "runtime": "python3.11"
-    }
-  },
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/proxy.py"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/proxy" }
   ]
 }
